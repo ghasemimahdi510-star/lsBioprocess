@@ -9,6 +9,61 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 🟢 کدهای جدید برای بارگذاری فونت محلی */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Regular.woff2') format('woff2'),
+         url('fonts/Vazirmatn-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Medium.woff2') format('woff2'),
+         url('fonts/Vazirmatn-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-SemiBold.woff2') format('woff2'),
+         url('fonts/Vazirmatn-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Bold.woff2') format('woff2'),
+         url('fonts/Vazirmatn-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-ExtraBold.woff2') format('woff2'),
+         url('fonts/Vazirmatn-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Black.woff2') format('woff2'),
+         url('fonts/Vazirmatn-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: 'Vazirmatn', Arial, sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 30%, #312e81 70%, #0f172a 100%);
@@ -1287,7 +1342,7 @@ body {
     font-weight: 500;
 }
 /* =================================================================== */
-/* Dropdown Final Solution - With Hidden Scrollbar                     */
+/* Dropdown Final Solution - With Hidden Scrollbar                     */
 /* =================================================================== */
 
 /* والد منو باید این خاصیت را داشته باشد */
@@ -1398,7 +1453,7 @@ body {
     grid-column: auto;
 }
 /* ============================================== */
-/* اصلاح اندازه لوگو در حالت موبایل            */
+/* اصلاح اندازه لوگو در حالت موبایل         */
 /* ============================================== */
 
 @media (max-width: 768px) {
@@ -1413,7 +1468,7 @@ body {
     }
 }
 /* ============================================== */
-/* اصلاح موقعیت منوی کشویی در حالت موبایل        */
+/* اصلاح موقعیت منوی کشویی در حالت موبایل         */
 /* ============================================== */
 @media (max-width: 768px) {
     .chapters-dropdown {
@@ -1433,6 +1488,15 @@ body {
         max-width: 350px;
     }
 
+@media (max-width: 768px) {
+  .video-container::before {
+    /* ابعاد را در موبایل کاهش دهید */
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+  }
+}
 
     /* ... سایر کدهای شما در این مدیا کوئری ... */
 }
