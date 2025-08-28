@@ -13,7 +13,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-Regular.woff2') format('woff2'),
-         url('fonts/Vazirmatn-Regular.woff') format('woff');
+          url('fonts/Vazirmatn-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -22,7 +22,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-Medium.woff2') format('woff2'),
-         url('fonts/Vazirmatn-Medium.woff') format('woff');
+          url('fonts/Vazirmatn-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -31,7 +31,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-SemiBold.woff2') format('woff2'),
-         url('fonts/Vazirmatn-SemiBold.woff') format('woff');
+          url('fonts/Vazirmatn-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-Bold.woff2') format('woff2'),
-         url('fonts/Vazirmatn-Bold.woff') format('woff');
+          url('fonts/Vazirmatn-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -49,7 +49,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-ExtraBold.woff2') format('woff2'),
-         url('fonts/Vazirmatn-ExtraBold.woff') format('woff');
+          url('fonts/Vazirmatn-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -58,7 +58,7 @@ html {
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-Black.woff2') format('woff2'),
-         url('fonts/Vazirmatn-Black.woff') format('woff');
+          url('fonts/Vazirmatn-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -567,34 +567,38 @@ body {
     margin: 2rem auto;
     border-radius: 0.75rem;
     position: relative;
-    padding: 0; /* حذف هرگونه پدینگ که ممکن است مشکل ایجاد کند */
-    overflow: hidden; /* بسیار مهم برای جلوگیری از بیرون‌زدگی هاله */
+    padding: 0;
+    overflow: hidden;
 }
 
-/* ❇️ طراحی هاله شیشه‌ای به عنوان پس‌زمینه جدید */
+//* حل قطعی مشکل هاله ویدئو */
 .video-container::before {
     content: '';
     position: absolute;
-    top: -10px;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.1));
     backdrop-filter: blur(20px);
     border-radius: 1rem;
-    z-index: -1; /* قرارگیری در پشت محتوای ویدیو */
+    z-index: -1;
     transition: all 0.3s ease;
 }
 
 .video-container:hover::before {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    transform: scale(1.01);
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.5));
 }
+
 
 /* اصلاح برای محتوای درون ویدیو-کانتینر */
 .video-container video, .video-container iframe {
     width: 100%;
-    height: auto; /* برای حفظ نسبت تصویر */
+    height: auto;
     display: block;
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.75rem;
@@ -689,36 +693,36 @@ body {
         gap: 1.5rem;
         padding: 1rem;
     }
-    
+
     .title-section h1 {
         font-size: 2rem;
     }
-    
+
     .subtitle {
         font-size: 1rem;
     }
-    
+
     .logo-section {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .modal-content {
         width: 95%;
         margin: 5% auto;
         padding: 1.5rem;
     }
-    
+
     .video-nav {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .video-actions {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .dropdown-content {
         width: 280px;
     }
@@ -728,23 +732,23 @@ body {
     .container {
         padding: 0 0.5rem;
     }
-    
+
     .chapter-content {
         padding: 1rem;
     }
-    
+
     .chapter-title {
         font-size: 1.1rem;
     }
-    
+
     .chapter-description {
         font-size: 0.875rem;
     }
-    
+
     .video-frame {
         height: 250px;
     }
-    
+
     .video-title {
         font-size: 1.5rem;
     }
@@ -1281,35 +1285,35 @@ body {
         gap: 2rem;
         text-align: center;
     }
-    
+
     .footer-logo {
         order: -1;
         margin-bottom: 1rem;
     }
-    
+
     .footer-section {
         text-align: center;
     }
-    
+
     .references-title {
         font-size: 2rem;
     }
-    
+
     .video-main-title {
         font-size: 1.5rem;
     }
-    
+
     .video-actions {
         flex-direction: column;
         align-items: center;
         padding-right: 0;
     }
-    
+
     .action-btn {
         width: 100%;
         max-width: 300px;
     }
-    
+
     .video-nav {
         flex-direction: column;
         text-align: center;
@@ -1320,19 +1324,19 @@ body {
     .references-container {
         padding: 1rem;
     }
-    
+
     .references-section {
         padding: 1.5rem;
     }
-    
+
     .section-title {
         font-size: 1.4rem;
     }
-    
+
     .video-content {
         padding: 1rem;
     }
-    
+
     .video-main-title {
         font-size: 1.5rem;
     }
@@ -1342,7 +1346,7 @@ body {
     font-weight: 500;
 }
 /* =================================================================== */
-/* Dropdown Final Solution - With Hidden Scrollbar                     */
+/* Dropdown Final Solution - With Hidden Scrollbar                     */
 /* =================================================================== */
 
 /* والد منو باید این خاصیت را داشته باشد */
@@ -1359,7 +1363,7 @@ body {
     right: auto;
 
     /* ۲. رفتار داخلی */
-    direction: rtl;    
+    direction: rtl;
 
     /* ۳. کنترل پهنا و ارتفاع */
     width: 320px;
@@ -1448,12 +1452,13 @@ body {
         grid-column: auto !important;
         margin-top: 0;
     }
+
 }
 .chapter-card:nth-child(10) {
     grid-column: auto;
 }
 /* ============================================== */
-/* اصلاح اندازه لوگو در حالت موبایل         */
+/* اصلاح اندازه لوگو در حالت موبایل      */
 /* ============================================== */
 
 @media (max-width: 768px) {
@@ -1468,7 +1473,7 @@ body {
     }
 }
 /* ============================================== */
-/* اصلاح موقعیت منوی کشویی در حالت موبایل         */
+/* اصلاح موقعیت منوی کشویی در حالت موبایل      */
 /* ============================================== */
 @media (max-width: 768px) {
     .chapters-dropdown {
@@ -1483,20 +1488,11 @@ body {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        
+
         width: 90vw;
         max-width: 350px;
     }
 
-@media (max-width: 768px) {
-  .video-container::before {
-    /* ابعاد را در موبایل کاهش دهید */
-    top: -5px;
-    bottom: -5px;
-    left: -5px;
-    right: -5px;
-  }
-}
 
     /* ... سایر کدهای شما در این مدیا کوئری ... */
 }
